@@ -56,6 +56,7 @@ public class EventCard extends UiPart<Region> {
      */
     public EventCard(Event event, int displayedIndex) {
         super(FXML);
+        assert false;
         this.event = event;
 
         id.setText(displayedIndex + ". ");
