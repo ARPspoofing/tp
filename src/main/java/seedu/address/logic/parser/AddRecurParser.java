@@ -54,7 +54,7 @@ public class AddRecurParser implements Parser<AddRecurCommand> {
     }
 
     /**
-     * Ensures the recur details are correct
+     * Ensures the recur details are correct by having either
      * @param recurDetails
      * @return AddRecurCommand
      * @throws ParseException

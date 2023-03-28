@@ -195,6 +195,15 @@ public class ParserUtil {
     public static String parseTutorialName(String name) throws ParseException {
         requireNonNull(name);
         String trimmedName = name.trim();
+
+        if (trimmedName.toLowerCase().contains("lab")) {
+            throw new ParseException(Name.MESSAGE_CONSTRAINTS);
+        }
+
+        if (trimmedName.toLowerCase().contains("consultation")) {
+            throw new ParseException(Name.MESSAGE_CONSTRAINTS);
+        }
+
         if (!Name.isValidName(trimmedName)) {
             throw new ParseException(Name.MESSAGE_CONSTRAINTS);
         }
@@ -210,6 +219,15 @@ public class ParserUtil {
     public static String parseLabName(String name) throws ParseException {
         requireNonNull(name);
         String trimmedName = name.trim();
+
+        if (trimmedName.toLowerCase().contains("tutorial")) {
+            throw new ParseException(Name.MESSAGE_CONSTRAINTS);
+        }
+
+        if (trimmedName.toLowerCase().contains("consultation")) {
+            throw new ParseException(Name.MESSAGE_CONSTRAINTS);
+        }
+
         if (!Name.isValidName(trimmedName)) {
             throw new ParseException(Name.MESSAGE_CONSTRAINTS);
         }
@@ -225,6 +243,15 @@ public class ParserUtil {
     public static String parseConsultationName(String name) throws ParseException {
         requireNonNull(name);
         String trimmedName = name.trim();
+
+        if (trimmedName.toLowerCase().contains("tutorial")) {
+            throw new ParseException(Name.MESSAGE_CONSTRAINTS);
+        }
+
+        if (trimmedName.toLowerCase().contains("lab")) {
+            throw new ParseException(Name.MESSAGE_CONSTRAINTS);
+        }
+
         if (!Name.isValidName(trimmedName)) {
             throw new ParseException(Name.MESSAGE_CONSTRAINTS);
         }
